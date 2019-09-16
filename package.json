@@ -1,7 +1,11 @@
 {
   "name": "@chrisjsherm/businessdiversity-utility",
-  "version": "1.0.3",
-  "description": "Utility functions for intializing supplier data.",
+  "version": "1.0.4",
+  "description": "Utility functions for initializing supplier data.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrisjsherm/businessdiversity-utility"
+  },
   "main": "./src/utility.js",
   "scripts": {
     "prettier": "prettier --single-quote --trailing-comma es5 --write ./src/**/*.js",
