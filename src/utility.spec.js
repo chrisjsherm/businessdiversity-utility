@@ -1,7 +1,7 @@
 import { assert } from 'chai';
 import UtilityService from './utility';
 import Region from '@chrisjsherm/region';
-const config = require('../config');
+const config = require('../config.sample');
 
 describe('Utility service', () => {
   const utilityService = new UtilityService(config);
