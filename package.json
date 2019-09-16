@@ -1,0 +1,24 @@
+{
+  "name": "@chrisjsherm/businessdiversity-utility",
+  "version": "1.0.3",
+  "description": "Utility functions for intializing supplier data.",
+  "main": "./src/utility.js",
+  "scripts": {
+    "prettier": "prettier --single-quote --trailing-comma es5 --write ./src/**/*.js",
+    "test": "mocha --require @babel/register --require @babel/polyfill src/**/*.spec.js"
+  },
+  "author": "chrisjsherm",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "7.6.0",
+    "@babel/polyfill": "7.6.0",
+    "@babel/preset-env": "7.6.0",
+    "@babel/register": "7.6.0",
+    "chai": "4.2.0",
+    "mocha": "6.2.0",
+    "prettier": "1.18.2"
+  },
+  "dependencies": {
+    "@chrisjsherm/region": "^1.0.1"
+  }
+}
