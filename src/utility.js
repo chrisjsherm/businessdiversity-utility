@@ -28,18 +28,12 @@ class Utility {
       throw new TypeError('Parameter vendorMap must be of type Map.');
     }
 
-    const regionsErrorMessage =
-      'Parameter regions must be an Array of ' +
-      `Regions. Invalid value: ${JSON.stringify(regions)}.`;
     if (!Array.isArray(regions)) {
-      throw new TypeError(regionsErrorMessage);
+      throw new TypeError(
+        'Parameter regions must be an Array. ' +
+          `Invalid value: ${JSON.stringify(regions)}`,
+      );
     }
-
-    regions.forEach(region => {
-      if (!(region instanceof Region)) {
-        throw new TypeError(regionsErrorMessage);
-      }
-    });
 
     for (const vendor of vendorMap.values()) {
       for (const region of regions) {
@@ -121,16 +115,16 @@ class Utility {
     if (typeof obj !== 'object' || obj === null) {
       throw new TypeError(
         `Parameter 'obj' must be of type Object. Invalid value: ${JSON.stringify(
-          obj
-        )}`
+          obj,
+        )}`,
       );
     }
 
     if (!Array.isArray(properties)) {
       throw new TypeError(
         `Parameter 'properties' must be an Array of strings. Invalid value: ${JSON.stringify(
-          properties
-        )}`
+          properties,
+        )}`,
       );
     }
 
@@ -138,8 +132,8 @@ class Utility {
       if (typeof prop !== 'string') {
         throw new TypeError(
           `Each property must be a string. Invalid value: ${JSON.stringify(
-            prop
-          )}`
+            prop,
+          )}`,
         );
       }
       obj[prop] = !!obj[prop];
@@ -163,7 +157,7 @@ class Utility {
     if (!Array.isArray(classificationCodesArr)) {
       throw new TypeError(
         'Parameter classificationCodesArr must be of type Array. ' +
-          `Invalid value: ${JSON.stringify(classificationCodesArr)}`
+          `Invalid value: ${JSON.stringify(classificationCodesArr)}`,
       );
     }
 
@@ -206,7 +200,7 @@ class Utility {
         if (dataObj[key]) {
           certifications.push(
             // Remove 'StartDate' from the certification key name.
-            key.replace('StartDate', '')
+            key.replace('StartDate', ''),
           );
         }
       }
@@ -216,7 +210,7 @@ class Utility {
       if (certifications.length) {
         vendorMap.set(
           dataObj[this.config.certificationNumberProperty],
-          dataObj
+          dataObj,
         );
       }
     });
